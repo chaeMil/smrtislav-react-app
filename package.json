@@ -7,13 +7,16 @@
     "test": "jest"
   },
   "rnpm": {
-    "assets": ["./assets/fonts/"]
+    "assets": [
+      "./assets/fonts/"
+    ]
   },
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.42.3",
     "react-native-storage": "^0.1.5",
-    "react-native-vector-icons": "^4.0.1"
+    "react-native-vector-icons": "^4.0.1",
+    "rn-viewpager": "^1.2.1"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",

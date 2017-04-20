@@ -8,6 +8,7 @@ import strings from '../strings/Locale';
 import Colors from '../styles/Colors';
 import Constants from '../strings/Constants';
 import {FontThemes} from '../styles/Styles';
+import {PagerTabIndicator, IndicatorViewPager, PagerTitleIndicator, PagerDotIndicator} from 'rn-viewpager';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const fbIcon = (<Icon name="facebook-official" size={30} color={Colors.primaryColor} />);
@@ -15,6 +16,10 @@ const instagramIcon = (<Icon name="instagram" size={30} color={Colors.primaryCol
 const youtubeIcon = (<Icon name="youtube" size={30} color={Colors.primaryColor} />);
 
 class HomeScreen extends BaseScreen {
+
+    _renderDotIndicator() {
+        return <PagerDotIndicator pageCount={4} />;
+    }
 
     render() {
 
@@ -25,8 +30,7 @@ class HomeScreen extends BaseScreen {
                 <StatusBarBackground/>
                 <ScrollView>
                     <View>
-                        <Image style={{width: screenWidth, height: screenWidth,
-                                resizeMode: 'contain'}}
+                        <Image style={{width: screenWidth, height: screenWidth, resizeMode: 'contain'}}
                               source={require('../../assets/images/samotar.jpg')} />
                         <Text style={[FontThemes.huge, {textAlign: 'center', height: 80,
                                 marginTop: 30}]}>
@@ -44,6 +48,27 @@ class HomeScreen extends BaseScreen {
                             {youtubeIcon}
                         </TouchableOpacity>
                     </View>
+                    <IndicatorViewPager
+                        style={{marginTop: 20, marginBottom: 20,
+                            height: screenWidth, backgroundColor: Colors.photosBg}}
+                        indicator={this._renderDotIndicator()}>
+                        <View key={1}>
+                            <Image style={{width: screenWidth, height: screenWidth, resizeMode: 'contain'}}
+                                   source={require('../../assets/images/photo1.jpg')} />
+                        </View>
+                        <View key={2}>
+                            <Image style={{width: screenWidth, height: screenWidth, resizeMode: 'contain'}}
+                                   source={require('../../assets/images/photo2.jpg')} />
+                        </View>
+                        <View key={3}>
+                            <Image style={{width: screenWidth, height: screenWidth, resizeMode: 'contain'}}
+                                   source={require('../../assets/images/photo3.jpg')} />
+                        </View>
+                        <View key={4}>
+                            <Image style={{width: screenWidth, height: screenWidth, resizeMode: 'contain'}}
+                                   source={require('../../assets/images/photo4.jpg')} />
+                        </View>
+                    </IndicatorViewPager>
                 </ScrollView>
             </ViewContainer>
         )
