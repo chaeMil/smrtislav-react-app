@@ -11,6 +11,12 @@ let FontThemes = StyleSheet.create({
         fontFamily: 'Kozuka Gothic Pro',
         color: Colors.primaryColor,
         fontSize: 40
+    },
+    paragraph: {
+        fontFamily: 'Kozuka Gothic Pro',
+        color: Colors.primaryColor,
+        fontSize: 16,
+        lineHeight: 30
     }
 });
 
