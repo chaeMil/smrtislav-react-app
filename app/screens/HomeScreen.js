@@ -1,6 +1,6 @@
 'user strict'
 import React,{Component} from 'react';
-import {View, Image, Text, ListView, TouchableOpacity, ActivityIndicator} from 'react-native'
+import {Dimensions, View, ScrollView, Image, Text, ListView, TouchableOpacity, ActivityIndicator} from 'react-native'
 import ViewContainer from '../components/ViewContainer'
 import StatusBarBackground from '../components/StatusBarBackground';
 import BaseScreen from '../screens/BaseScreen';
@@ -8,26 +8,43 @@ import strings from '../strings/Locale';
 import Colors from '../styles/Colors';
 import Constants from '../strings/Constants';
 import {FontThemes} from '../styles/Styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-let homeData = [];
+const fbIcon = (<Icon name="facebook-official" size={30} color={Colors.primaryColor} />);
+const instagramIcon = (<Icon name="instagram" size={30} color={Colors.primaryColor} />);
+const youtubeIcon = (<Icon name="youtube" size={30} color={Colors.primaryColor} />);
 
 class HomeScreen extends BaseScreen {
-    constructor(props) {
-        super(props);
-        let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 != r2});
-        this.state = {
-            homeDataSource: ds.cloneWithRows(homeData)
-        }
-    }
 
     render() {
 
+        let screenWidth = Dimensions.get('window').width;
+
         return (
-            <ViewContainer style={{flexDirection: 'column'}}>
+            <ViewContainer>
                 <StatusBarBackground/>
-                <Image style={{flex: 1, aspectRatio: 1, resizeMode: 'contain'}}
-                       source={require('../../assets/images/samotar.jpg')} />
-                <Text style={FontThemes.h1}>Smrtislav</Text>
+                <ScrollView>
+                    <View>
+                        <Image style={{width: screenWidth, height: screenWidth,
+                                resizeMode: 'contain'}}
+                              source={require('../../assets/images/samotar.jpg')} />
+                        <Text style={[FontThemes.huge, {textAlign: 'center', height: 80,
+                                marginTop: 30}]}>
+                            SMRTISLAV
+                        </Text>
+                    </View>
+                    <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                        <TouchableOpacity style={{padding: 12}}>
+                            {fbIcon}
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{padding: 12}}>
+                            {instagramIcon}
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{padding: 12}}>
+                            {youtubeIcon}
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
             </ViewContainer>
         )
     }
