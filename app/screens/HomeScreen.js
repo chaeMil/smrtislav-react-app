@@ -7,6 +7,7 @@ import BaseScreen from '../screens/BaseScreen';
 import strings from '../strings/Locale';
 import Colors from '../styles/Colors';
 import Constants from '../strings/Constants';
+import {FontThemes} from '../styles/Styles';
 
 let homeData = [];
 
@@ -15,27 +16,18 @@ class HomeScreen extends BaseScreen {
         super(props);
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 != r2});
         this.state = {
-            isLoading: true,
             homeDataSource: ds.cloneWithRows(homeData)
         }
     }
 
     render() {
 
-        let activityIndicator = null;
-        if (this.state.isLoading) {
-            activityIndicator = (
-                <ActivityIndicator
-                    refs="indicator"
-                    style={{position: 'absolute', left: 0, right: 0, top: 0, bottom: 0}}/>
-            );
-        }
-
         return (
-            <ViewContainer>
+            <ViewContainer style={{flexDirection: 'column'}}>
                 <StatusBarBackground/>
-                {activityIndicator}
-
+                <Image style={{flex: 1, aspectRatio: 1, resizeMode: 'contain'}}
+                       source={require('../../assets/images/samotar.jpg')} />
+                <Text style={FontThemes.h1}>Smrtislav</Text>
             </ViewContainer>
         )
     }

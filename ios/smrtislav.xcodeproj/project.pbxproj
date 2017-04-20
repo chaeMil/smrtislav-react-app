@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -47,6 +46,8 @@
 		CE9D6815D05443ACA9726323 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75FAB59F333F4928AD241143 /* Ionicons.ttf */; };
 		D996BDA358184218A3134CD9 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D690BF329B34DA1A9F59EDD /* Zocial.ttf */; };
 		F326BD44645F4DFE99E5105D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23735415CEA4E72BFB1C19D /* MaterialCommunityIcons.ttf */; };
+		EB86320C09C24176B0D47C8D /* kozuka-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D3F2310DD74804B4272510 /* kozuka-gothic.ttf */; };
+		3BF8D03A32C94BEDAF16E5DC /* Kozuka Gothic Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C29453726CE419099BBAC22 /* Kozuka Gothic Pro.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +286,8 @@
 		B4C728D78FD945C5B9BF4616 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		E752FEC4DEC44AD19FCC36F9 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		F23735415CEA4E72BFB1C19D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		F6D3F2310DD74804B4272510 /* kozuka-gothic.ttf */ = {isa = PBXFileReference; name = "kozuka-gothic.ttf"; path = "../assets/fonts/kozuka-gothic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C29453726CE419099BBAC22 /* Kozuka Gothic Pro.ttf */ = {isa = PBXFileReference; name = "Kozuka Gothic Pro.ttf"; path = "../assets/fonts/Kozuka Gothic Pro.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +532,8 @@
 				B4C728D78FD945C5B9BF4616 /* Octicons.ttf */,
 				3CD26A902ECB481691AD8092 /* SimpleLineIcons.ttf */,
 				0D690BF329B34DA1A9F59EDD /* Zocial.ttf */,
+				F6D3F2310DD74804B4272510 /* kozuka-gothic.ttf */,
+				6C29453726CE419099BBAC22 /* Kozuka Gothic Pro.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -924,6 +929,8 @@
 				A1ACB59243A54B6AAE3DDF33 /* Octicons.ttf in Resources */,
 				A7969B9F99B0464D8AC98FA4 /* SimpleLineIcons.ttf in Resources */,
 				D996BDA358184218A3134CD9 /* Zocial.ttf in Resources */,
+				EB86320C09C24176B0D47C8D /* kozuka-gothic.ttf in Resources */,
+				3BF8D03A32C94BEDAF16E5DC /* Kozuka Gothic Pro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
